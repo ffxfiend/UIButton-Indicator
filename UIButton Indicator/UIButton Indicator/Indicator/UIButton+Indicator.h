@@ -1,23 +1,7 @@
-UIButton Indicator for iOS
-=============
-A simple category in Objective-C allowing you to add an activity indicator view to a button in place of the button text when the button is pressed.
+/***************************************************************************
+UIButton+Indicator.h
+UIButton Indicator
 
-Examples
----------
-```objc
-// Show Indicator
-[_myCustomButton showIndicator];
-
-// Hide Indicator
-[_myCustomButton hideIndicator];
-```
-
-Setup Instructions
-------------------
-1. Add `UIButton+Indicator.h` & `UIButton+Indicator.m` to your project.
-
-The MIT License (MIT)
------------
 Copyright (c) 2015 Jeremiah Poisson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,4 +21,24 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+***************************************************************************/
 
+#import <UIKit/UIKit.h>
+
+/**
+ Simple category that lets you replace the text of a button with an activity indicator.
+ */
+
+@interface UIButton (Indicator)
+
+/**
+ This method will show the activity indicator in place of the button text.
+ */
+- (void) showIndicator;
+
+/**
+ This method will remove the indicator and put thebutton text back in place.
+ */
+- (void) hideIndicator;
+
+@end
